@@ -1,0 +1,48 @@
+.progress-bar {
+  display: flex;
+  width: 250px;
+  height: 4px;
+  background-color: #999;
+  margin-bottom: 10px;
+}
+.progress-bar-completed {
+  background-color: #34547A;
+}
+
+video {
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 480px;
+  background-image: url(card.png);
+  background-size: cover;
+  position: relative;
+}
+.card-view-icon {
+  z-index: 2;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.card-filter {
+  position: absolute;
+  background-color: #34547A;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.card:hover .card-view-icon {
+  opacity: 1;
+}
+.card:hover .card-filter {
+  opacity: 0.8;
+}
